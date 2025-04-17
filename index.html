@@ -18,6 +18,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
+            line-height: 1.6;
         }
         
         .hero-section {
@@ -76,7 +77,34 @@
             background: var(--accent);
             border: 3px solid white;
         }
+
+        /* Otimizações de imagem */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+        
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+        
+        /* Preload para fontes críticas */
+        body {
+            font-display: swap;
+        }
     </style>
+    <!-- Pré-conexão para CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
     <!-- Navbar -->
@@ -113,7 +141,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-4" alt="Márcio Teles" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid white;">
+                    <!-- Imagem otimizada com SVG como fallback -->
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23ddd'/%3E%3Ctext x='50%' y='50%' font-family='Arial' font-size='16' fill='%23666' text-anchor='middle' dominant-baseline='middle'%3E150x150%3C/text%3E%3C/svg%3E" 
+                         class="rounded-circle mb-4 profile-img" 
+                         alt="Márcio Teles"
+                         loading="eager">
                     <h1 class="display-4 fw-bold mb-3">Márcio Teles</h1>
                     <h2 class="h4 mb-4">Cientista de Dados & Desenvolvedor Full Stack</h2>
                     <p class="lead mb-4">16+ anos transformando dados em insights e criando soluções tecnológicas completas</p>
@@ -139,7 +171,7 @@
                         <a href="https://www.linkedin.com/in/m%C3%A1rcio-teles-63191387" class="btn btn-primary me-2" target="_blank">
                             <i class="fab fa-linkedin me-1"></i> LinkedIn
                         </a>
-                        <a href="https://github.com/seunome" class="btn btn-dark" target="_blank">
+                        <a href="https://github.com/tsmarcio" class="btn btn-dark" target="_blank">
                             <i class="fab fa-github me-1"></i> GitHub
                         </a>
                     </div>
@@ -269,7 +301,11 @@
                 <!-- Dashboard Vigilância RJ -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card project-card shadow-sm">
-                        <img src="https://via.placeholder.com/400x250?text=Dashboard+Vigilancia" class="card-img-top" alt="Dashboard Vigilância RJ">
+                        <!-- SVG como placeholder otimizado -->
+                        <svg class="card-img-top project-img" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#3498db"/>
+                            <text x="50%" y="50%" fill="#fff" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle">Dashboard Vigilância RJ</text>
+                        </svg>
                         <div class="card-body">
                             <h3 class="h5 card-title">Dashboard Vigilância RJ</h3>
                             <p class="card-text">Dashboard analítico para a Vigilância Sanitária com KPIs regionais e insights para tomada de decisão.</p>
@@ -286,7 +322,11 @@
                 <!-- API Sisvisa -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card project-card shadow-sm">
-                        <img src="https://via.placeholder.com/400x250?text=API+Sisvisa" class="card-img-top" alt="API Sisvisa .NET">
+                        <!-- SVG como placeholder otimizado -->
+                        <svg class="card-img-top project-img" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#2c3e50"/>
+                            <text x="50%" y="50%" fill="#fff" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle">API Sisvisa .NET</text>
+                        </svg>
                         <div class="card-body">
                             <h3 class="h5 card-title">API Sisvisa .NET</h3>
                             <p class="card-text">API RESTful desenvolvida em ASP.NET Core 7 para integração com sistemas legados da vigilância sanitária.</p>
@@ -303,7 +343,11 @@
                 <!-- E-commerce -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card project-card shadow-sm">
-                        <img src="https://mtsinfoconsult.wixsite.com/mtsinfo" class="card-img-top" alt="E-commerce Bootstrap">
+                        <!-- SVG como placeholder otimizado -->
+                        <svg class="card-img-top project-img" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100%" height="100%" fill="#e74c3c"/>
+                            <text x="50%" y="50%" fill="#fff" font-family="Arial" font-size="24" text-anchor="middle" dominant-baseline="middle">E-commerce Bootstrap</text>
+                        </svg>
                         <div class="card-body">
                             <h3 class="h5 card-title">E-commerce Bootstrap</h3>
                             <p class="card-text">Template completo de e-commerce com back-end em C# e front-end responsivo com Bootstrap.</p>
@@ -354,7 +398,7 @@
                         <li>Arquitetura de soluções escaláveis com .NET Framework</li>
                         <li>Otimização de consultas SQL e desempenho de bancos de dados</li>
                         <li>Mentoria de desenvolvedores juniores</li>
-						<li>Desenvolvimento de dashboards analíticos com Power BI para tomada de decisão estratégica</li>
+                        <li>Desenvolvimento de dashboards analíticos com Power BI para tomada de decisão estratégica</li>
                         <li>Criação de APIs RESTful com ASP.NET Core para integração de sistemas</li>
                         <li>Modelagem de bancos de dados SQL e NoSQL para aplicações críticas</li>
                         <li>Implementação de soluções ETL para processamento de grandes volumes de dados</li>
@@ -369,7 +413,7 @@
                         <li>Responsável pelo suporte em TI aos usuários administrativos e em eventos da empresa, garantindo o bom funcionamento de equipamentos e sistemas</li>
                         <li>Manutenção de microcomputadores, notebooks, impressoras e redes, assegurando a operação contínua dos recursos tecnológicos</li>
                         <li>Suporte técnico e operacional ao sistema COLIBRI (desenvolvido em Python), utilizado para a gestão de vendas da empresa</li>
-						<li>Gestão e resolução de problemas relacionados a hardware, software e infraestrutura de TI</li>
+                        <li>Gestão e resolução de problemas relacionados a hardware, software e infraestrutura de TI</li>
                     </ul>
                 </div>
             </div>
@@ -411,7 +455,7 @@
                                     <i class="fab fa-github fa-2x"></i>
                                 </div>
                                 <h3 class="h5">GitHub</h3>
-                                <a href="https://github.com/seunome" target="_blank">/seunome</a>
+                                <a href="https://github.com/tsmarcio" target="_blank">/tsmarcio</a>
                             </div>
                         </div>
                     </div>
@@ -427,31 +471,33 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script>
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
-        
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                }
+            
+            // Animation on scroll - carregado apenas após o DOM estar pronto
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }, {
+                threshold: 0.1
             });
-        }, {
-            threshold: 0.1
-        });
-        
-        document.querySelectorAll('.skill-badge, .project-card, .timeline-item').forEach(el => {
-            observer.observe(el);
+            
+            document.querySelectorAll('.skill-badge, .project-card, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
