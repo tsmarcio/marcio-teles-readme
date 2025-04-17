@@ -1,460 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Power BI - Márcio Teles | Cientista de Dados</title>
-    <style>
-        :root {
-            --primary: #2b579a;
-            --secondary: #f25022;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --success: #7fba00;
-            --info: #00a4ef;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--info));
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-        
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        .subtitle {
-            font-weight: 300;
-            margin-top: 0.5rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .tagline {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 1rem;
-            font-weight: 500;
-        }
-        
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 3rem;
-        }
-        
-        .dashboard-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .dashboard-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card-icon {
-            height: 120px;
-            background-color: #e9f2ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
-        }
-        
-        .card-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-title {
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
-            color: var(--primary);
-        }
-        
-        .card-text {
-            margin-bottom: 15px;
-            color: #555;
-            flex-grow: 1;
-        }
-        
-        .card-footer {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .btn:hover {
-            background-color: #1e3f6f;
-            color: white;
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .btn-powerbi {
-            background-color: #f2c811;
-            color: #000;
-        }
-        
-        .btn-powerbi:hover {
-            background-color: #d9b310;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: var(--secondary);
-            margin: 10px auto;
-        }
-        
-        .skills-section {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 3rem;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .skill-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #e9f2ff;
-            border-radius: 50%;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-        
-        .learning-section {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
-        
-        .learning-item {
-            display: inline-block;
-            background-color: white;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            font-size: 0.9rem;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            border-radius: 10px 10px 0 0;
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-link {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
-            padding: 8px 15px;
-            border-radius: 4px;
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        .contact-link:hover {
-            color: var(--info);
-            background-color: rgba(255,255,255,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .contact-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Power BI - Márcio Teles | Cientista de Dados</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #2b579a;
+      --secondary: #f25022;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #7fba00;
+      --info: #00a4ef;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--info));
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-weight: 300;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tagline {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .section-title:after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+      margin: 10px auto;
+    }
+
+    .learning-section,
+    .certifications-section {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+
+    .learning-item,
+    .certification-item {
+      display: inline-block;
+      background-color: white;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+      padding: 8px 15px;
+      border-radius: 4px;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .contact-link:hover {
+      color: var(--info);
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .contact-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="profile">
-                <!-- Substitua pelo link da sua foto real -->
-                <img src="https://ui-avatars.com/api/?name=Márcio+Teles&size=120&background=2b579a&color=fff" alt="Márcio Teles" class="avatar">
-                <h1>Márcio Teles da Silva</h1>
-                <span class="tagline">Cientista de Dados e Desenvolvedor Full Stack</span>
-                <p class="subtitle">Mais de 16 anos de experiência em TI, atuando com soluções completas que integram análise de dados, desenvolvimento de sistemas e suporte técnico de alto nível.</p>
-            </div>
-        </div>
-    </header>
-    
+  <header>
     <div class="container">
-        <section>
-            <h2 class="section-title">Projetos em Destaque</h2>
-            <div class="dashboard-grid">
-                <!-- Projeto 1 -->
-                <div class="dashboard-card">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Dashboard Vigilância-RJ</h3>
-                        <p class="card-text">Dashboard analítico criado para a Vigilância Sanitária, com KPIs regionais e insights para tomada de decisão utilizando Power BI.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-powerbi">
-                                <i class="fas fa-external-link-alt"></i> Ver Dashboard
-                            </a>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fab fa-github"></i> Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto 2 -->
-                <div class="dashboard-card">
-                    <div class="card-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">API RESTful SISVISA</h3>
-                        <p class="card-text">API desenvolvida em ASP.NET Core 7 para integração com sistemas legados da vigilância sanitária.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">
-                                <i class="fas fa-link"></i> Documentação
-                            </a>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fab fa-github"></i> Repositório
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto 3 -->
-                <div class="dashboard-card">
-                    <div class="card-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">E-commerce Bootstrap</h3>
-                        <p class="card-text">Modelo de e-commerce responsivo com C# no back-end e Bootstrap no front-end.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">
-                                <i class="fas fa-eye"></i> Demo
-                            </a>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fab fa-github"></i> Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="skills-section">
-            <h2 class="section-title">Tecnologias e Ferramentas</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div>
-                        <h3>Linguagens</h3>
-                        <p>C#, Python, JavaScript, SQL</p>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <div>
-                        <h3>Frameworks</h3>
-                        <p>.NET Core, Bootstrap, ASP.NET, Entity Framework</p>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div>
-                        <h3>Banco de Dados</h3>
-                        <p>SQL Server, MongoDB, MariaDB</p>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div>
-                        <h3>BI & Analytics</h3>
-                        <p>Power BI, Dashboards, KPIs</p>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <div>
-                        <h3>Cloud & DevOps</h3>
-                        <p>Azure, Zabbix, GitHub</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="learning-section">
-            <h2 class="section-title">Atualmente Estudando</h2>
-            <div style="text-align: center;">
-                <span class="learning-item"><i class="fab fa-react"></i> React</span>
-                <span class="learning-item"><i class="fab fa-angular"></i> Angular</span>
-                <span class="learning-item"><i class="fas fa-chart-line"></i> Power BI Avançado</span>
-                <span class="learning-item"><i class="fas fa-cloud"></i> Cloud (Azure/AWS)</span>
-                <span class="learning-item"><i class="fas fa-project-diagram"></i> Arquitetura de Software</span>
-                <span class="learning-item"><i class="fab fa-golang"></i> GoLang</span>
-            </div>
-        </section>
+      <div class="profile">
+        <img src="https://ui-avatars.com/api/?name=Márcio+Teles&size=120&background=2b579a&color=fff" alt="Márcio Teles" class="avatar">
+        <h1>Márcio Teles da Silva</h1>
+        <span class="tagline">Cientista de Dados e Desenvolvedor Full Stack</span>
+        <p class="subtitle">Mais de 16 anos de experiência em TI, atuando com soluções completas que integram análise de dados, desenvolvimento de sistemas e suporte técnico de alto nível.</p>
+      </div>
     </div>
-    
-    <footer>
-        <div class="container">
-            <h2>Vamos nos conectar?</h2>
-            <p>Interessado em meu trabalho? Estou aberto a novas oportunidades e colaborações!</p>
-            
-            <div class="contact-links">
-                <a href="mailto:tsmarcio@hotmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> tsmarcio@hotmail.com
-                </a>
-                
-                <a href="https://www.linkedin.com/in/marcio-teles-63191387/" class="contact-link" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                
-                <a href="https://github.com/seu-usuario" class="contact-link" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
-            
-            <p style="margin-top: 2rem; opacity: 0.8;">
-                &copy; <script>document.write(new Date().getFullYear())</script> Márcio Teles. Todos os direitos reservados.
-            </p>
-        </div>
-    </footer>
+  </header>
+
+  <div class="container">
+    <!-- outras seções aqui... -->
+
+    <section class="learning-section">
+      <h2 class="section-title">Atualmente Estudando</h2>
+      <div style="text-align: center;">
+        <span class="learning-item"><i class="fab fa-react"></i> React</span>
+        <span class="learning-item"><i class="fab fa-angular"></i> Angular</span>
+        <span class="learning-item"><i class="fas fa-chart-line"></i> Power BI Avançado</span>
+        <span class="learning-item"><i class="fas fa-cloud"></i> Cloud (Azure/AWS)</span>
+        <span class="learning-item"><i class="fas fa-project-diagram"></i> Arquitetura de Software</span>
+        <span class="learning-item"><i class="fab fa-golang"></i> GoLang</span>
+      </div>
+    </section>
+
+    <section class="certifications-section">
+      <h2 class="section-title">Certificações e Conquistas</h2>
+      <div style="text-align: center;">
+        <span class="certification-item"><i class="fas fa-certificate"></i> Microsoft Certified: Power BI Data Analyst Associate</span>
+        <span class="certification-item"><i class="fas fa-graduation-cap"></i> Pós-graduação em Analytics e IA – PUC-Rio</span>
+        <span class="certification-item"><i class="fas fa-certificate"></i> Curso de Arquitetura de Software com .NET</span>
+        <span class="certification-item"><i class="fas fa-award"></i> Destaque Técnico IVISA-RIO – 2024</span>
+        <span class="certification-item"><i class="fas fa-certificate"></i> Formação Completa Power BI – DAX e Modelagem</span>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <h2>Vamos nos conectar?</h2>
+      <p>Interessado em meu trabalho? Estou aberto a novas oportunidades e colaborações!</p>
+      <div class="contact-links">
+        <a href="mailto:tsmarcio@hotmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i> tsmarcio@hotmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/marcio-teles-63191387/" class="contact-link" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
