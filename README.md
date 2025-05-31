@@ -16,7 +16,7 @@
 
 ## 🔧 Repositórios em Destaque - em construção
 
-📊 **[dashboard-vigilancia-rj](https://github.com/seunome/dashboard-vigilancia-rj)**  
+📊 **[[dashboard-vigilancia-rj](https://github.com/seunome/dashboard-vigilancia-rj)](https://app.powerbi.com/view?r=eyJrIjoiNzdhM2YwYzItODY2MS00MTk4LWEwYjctZWRkNTg4OTM2ZTgzIiwidCI6IjQzMThlMWQwLTc1YWMtNDg2MC05NTFjLTViODRhYjQ4MzZlMCJ9&pageName=0ab08afe84e474ffcf2a)**  
 Dashboard analítico criado para a Vigilância Sanitária, com KPIs regionais e insights para tomada de decisão.
 
 🧰 **[api-sisvisa-dotnet](https://github.com/seunome/api-sisvisa-dotnet)**  
