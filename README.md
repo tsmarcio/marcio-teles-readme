@@ -1,44 +1,58 @@
 # 👋 Olá, eu sou o Márcio Teles
 
-🎯 Cientista de Dados e Desenvolvedor Full Stack com mais de 16 anos de experiência em TI, atuando com soluções completas que integram análise de dados, desenvolvimento de sistemas e suporte técnico de alto nível.
+🎯 **Cientista de Dados e Desenvolvedor Full Stack** com mais de **16 anos de experiência** em Tecnologia da Informação. Atuo no desenvolvimento de **soluções completas e integradas**, unindo **inteligência analítica**, **engenharia de software** e **suporte técnico estratégico**.
+
+Tenho experiência consolidada em projetos desafiadores nos setores público e privado, com foco em:
+
+- 📊 **Análise de Dados e Ciência de Dados** — Transformando dados em insights acionáveis com dashboards, modelagem estatística e machine learning.  
+- 💻 **Desenvolvimento Full Stack** — Aplicações robustas, escaláveis e seguras com foco na experiência do usuário e alta performance.  
+- 🔧 **Arquitetura de Sistemas e Automação de Processos** — Integração de tecnologias para acelerar resultados e agregar valor contínuo.  
+- 🛠️ **Suporte Técnico e Sustentação de Sistemas** — Atuação em ambientes críticos com excelência em estabilidade e evolução tecnológica.
+
+Sou movido por inovação, aprendizado contínuo e pelo impacto positivo da tecnologia nas organizações e na vida das pessoas.
 
 ---
 
 ## 🚀 Tecnologias e Ferramentas
 
-- 👨‍💻 Linguagens: `C#`, `Python`, `JavaScript`, `SQL`
-- 🛠️ Frameworks: `.NET Core`, `Bootstrap`, `ASP.NET`, `Entity Framework`
-- 🧠 Dados: `SQL Server`, `MongoDB`, `Power BI`, `MariaDB`
-- ☁️ Cloud & DevOps: `Azure (em aprendizado)`, `Zabbix`, `GitHub`
-- 📈 BI: Dashboards com KPIs e relatórios dinâmicos
+- 👨‍💻 **Linguagens:** `C#`, `Python`, `JavaScript`, `SQL`  
+- 🛠️ **Frameworks:** `.NET Core`, `Bootstrap`, `ASP.NET`, `Entity Framework`  
+- 🧠 **Dados:** `SQL Server`, `MongoDB`, `Power BI`, `MariaDB`  
+- ☁️ **Cloud & DevOps:** `AWS`, `Zabbix`, `GitHub`  
+- 📈 **BI:** Dashboards com KPIs e relatórios dinâmicos  
 
 ---
 
-## 🔧 IVISA na Prática: Meu Portfólio de Resultados e Inovações
+## 🔧 [IVISA na Prática: Meu Portfólio de Resultados e Inovações](https://tinyurl.com/3wbbs6dc)
 
-📊 https://tinyurl.com/3wbbs6dc
-Dashboard analítico criado para a Vigilância Sanitária, com KPIs regionais e insights para tomada de decisão.
+- 📊 [Dashboard Analítico da Vigilância Sanitária](https://tinyurl.com/3wbbs6dc)  
+  Painel com KPIs regionais e insights estratégicos para tomada de decisão.  
 
-🧰 https://tinyurl.com/483xa7rp
-Painel interativo para monitoramento e rastreamento das entregas de notificações de multas emitidas pela iVisa via Correios. A análise contempla filtros por data, status de entrega, destinatário e código de rastreio, permitindo o acompanhamento em tempo real do andamento das correspondências, identificação de pendências e otimização do processo logístico.
+- 🧰 [Rastreamento de Multas - Correios](https://tinyurl.com/483xa7rp)  
+  Painel interativo para acompanhar em tempo real o status das notificações.  
 
-🌐 https://tinyurl.com/9f2723mu
-O Template Interativo de Cursos IVISA é uma solução dinâmica desenvolvida em Power BI para oferecer aos usuários finais uma visão completa, intuitiva e responsiva do portfólio de treinamentos disponibilizados pela IVISA.
+- 🌐 [Template Interativo de Cursos IVISA](https://tinyurl.com/9f2723mu)  
+  Solução responsiva em Power BI para visualização de treinamentos e emissão de certificados.
 
 ---
 
-## 📚 Em aprendizado
+## 📚 Em Aprendizado Contínuo
 
 Atualmente me aprofundando em:
-- `React` e `Angular`
-- `Power BI Avançado`
-- `Cloud (Azure e AWS)`
-- `Arquitetura de Software`
-- `GoLang`
+
+- `React` e `Angular`  
+- `Power BI Avançado`  
+- `Cloud (Azure e AWS)`  
+- `Arquitetura de Software`  
+- `GoLang`  
 
 ---
 
-## 📬 Vamos nos conectar?
+## 📬 Vamos nos Conectar?
 
-- LinkedIn: [linkedin.com/in/marcio-teles-63191387](https://www.linkedin.com/in/m%C3%A1rcio-teles-63191387)
-- E-mail: marcio@mtsinforj.com.br
+- 🔗 [LinkedIn](https://www.linkedin.com/in/m%C3%A1rcio-teles-63191387)  
+- 📧 E-mail: [marcio@mtsinforj.com.br](mailto:marcio@mtsinforj.com.br)  
+- 📧 E-mail: [tsmarcio@hotmail.com](mailto:tsmarcio@hotmail.com)  
+- 📱 WhatsApp/Telefone: [(21) 96497-6686](tel:+5521964976686)
+
+---
