@@ -35,8 +35,8 @@ Sou movido por inovação, aprendizado contínuo e pelo impacto positivo da tecn
   Solução responsiva em Power BI para visualização de treinamentos e emissão de certificados.
 
 - 🐞 [Relatório de Erros e Solicitações de Cadastro](https://tinyurl.com/2sac236x)  
-  Dashboard analítico com monitoramento de **erros (bugs)** relatados por usuários durante o **processo de cadastro e solicitação de autorização sanitária**.  
-  Inclui termos utilizados pelos próprios solicitantes, categorização de falhas mais comuns e insights para melhorias contínuas na experiência do usuário.
+  Dashboard de BI para análise dos principais erros relatados por usuários no cadastro e solicitação de autorização sanitária,
+  com termos reais usados nos chamados e insights para correções sistêmicas.
 
 ---
 
